@@ -1,11 +1,12 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import { FormattedMessage, Link } from "gatsby-plugin-intl";
-import Language from "../components/language";
+import Language from "../../../components/language";
 
-const IndexPage: React.FC<PageProps> = () => {
+const IndexPage: React.FC<PageProps> = ({ params }) => {
   return (
     <main>
+      {JSON.stringify(params)}
       <Language />
       <h1>
         <FormattedMessage id="hello" />
